@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game TopUp BD</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-900 text-white font-sans min-h-screen p-4">
+
+    <div class="max-w-md mx-auto bg-slate-800 rounded-xl shadow-lg p-6 mt-10 border border-slate-700">
+        <h1 class="text-2xl font-bold text-center text-orange-500 mb-6">🎮 Game TopUp BD</h1>
+
+        <!-- Form Start -->
+        <form id="topupForm" class="space-y-4">
+            <!-- Game Select -->
+            <div>
+                <label class="block text-sm font-medium mb-1">গেম নির্বাচন করুন</label>
+                <select id="gameName" class="w-full bg-slate-700 border border-slate-600 rounded-lg p-2.5 text-white focus:outline-none focus:border-orange-500">
+                    <option value="Free Fire">Free Fire (UID TopUp)</option>
+                    <option value="eFootball">eFootball (Coin Buy)</option>
+                </select>
+            </div>
+
+            <!-- Player UID -->
+            <div>
+                <label class="block text-sm font-medium mb-1">গেম Player UID লিখুন</label>
+                <input type="text" id="playerUid" required placeholder="উদাহরণ: 1234567890" class="w-full bg-slate-700 border border-slate-600 rounded-lg p-2.5 text-white focus:outline-none focus:border-orange-500">
+            </div>
+
+            <!-- Package Select -->
+            <div>
+                <label class="block text-sm font-medium mb-1">প্যাকেজ সিলেক্ট করুন</label>
+                <select id="packageSelect" class="w-full bg-slate-700 border border-slate-600 rounded-lg p-2.5 text-white focus:outline-none focus:border-orange-500">
+                    <option value="115 Diamonds - 85 BDT">115 Diamonds - 85 BDT</option>
+                    <option value="240 Diamonds - 170 BDT">240 Diamonds - 170 BDT</option>
+                    <option value="eFootball 100 Coins - 120 BDT">eFootball 100 Coins - 120 BDT</option>
+                </select>
+            </div>
+
+            <!-- Payment Method -->
+            <div>
+                <label class="block text-sm font-medium mb-1">পেমেন্ট মাধ্যম</label>
+                <div class="grid grid-cols-2 gap-4">
+                    <label class="border border-slate-600 p-3 rounded-lg text-center cursor-pointer hover:border-pink-500">
+                        <input type="radio" name="payment" value="bKash" checked class="mr-2"> bKash
+                    </label>
+                    <label class="border border-slate-600 p-3 rounded-lg text-center cursor-pointer hover:border-orange-500">
+                        <input type="radio" name="payment" value="Nagad" class="mr-2"> Nagad
+                    </label>
+                </div>
+            </div>
+
+            <!-- TrxID -->
+            <div>
+                <label class="block text-sm font-medium mb-1">বিকাশ/নগদ Transaction ID (TrxID)</label>
+                <input type="text" id="trxId" required placeholder="যেমন: 9N78X..." class="w-full bg-slate-700 border border-slate-600 rounded-lg p-2.5 text-white focus:outline-none focus:border-orange-500">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition duration-200">অর্ডার কনফার্ম করুন</button>
+        </form>
+    </div>
+
+    <!-- JavaScript Script -->
+    <script src="script.js"></script>
+</body>
+</html>
